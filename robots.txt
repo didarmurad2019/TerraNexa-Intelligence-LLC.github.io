@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /bylaws.html
+Disallow: /assets/auth/
