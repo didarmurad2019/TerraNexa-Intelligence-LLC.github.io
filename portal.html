@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/style.css"><title>Bylaws Portal Login | TerraNexa Intelligence, LLC</title><meta name="robots" content="noindex"></head><body>
+<header><div class="wrap nav"><a class="logo" href="index.html"><img src="assets/img/favicon.svg" alt="">TerraNexa</a><button class="burger" aria-label="Menu">☰</button>
+<ul class="menu"><li><a href="index.html#home">Home</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#technologies">Technologies</a></li><li><a href="index.html#solutions">Solutions</a></li><li><a href="index.html#approach">Approach</a></li><li><a href="index.html#contact">Contact</a></li><li><a class="btn p" href="portal.html">Bylaws Portal</a></li></ul></div></header>
+<main class="center"><canvas id="net"></canvas>
+<form class="panel login" id="lf" autocomplete="on"><span class="tag">🔒 Secure Access</span><h2>Bylaws <span class="grad">Portal</span></h2><p style="color:var(--mut);margin-bottom:10px">Sign in to view the TerraNexa Intelligence, LLC Bylaws.</p>
+<label>User Name / Email<input id="id" name="username" autocomplete="username" required></label>
+<label>Password<span class="pw"><input id="pw" type="password" name="password" autocomplete="current-password" required><button type="button" id="tg">Show</button></span></label>
+<div class="err" id="err" role="alert"></div><button class="btn p" type="submit">Sign In</button></form></main>
+<footer><div class="wrap foot"><div>© <span id="yr"></span> TerraNexa Intelligence, LLC. All rights reserved.</div><nav><a href="index.html#about">About</a><a href="index.html#technologies">Technologies</a><a href="index.html#contact">Contact</a><a href="portal.html">Bylaws Portal</a></nav></div></footer>
+<script src="assets/js/main.js"></script><script src="assets/js/auth.js"></script>
+<script>
+if(Auth.get()&&Date.now()<Auth.get().exp)location.replace('bylaws.html');
+tg.onclick=()=>{const s=pw.type==='password';pw.type=s?'text':'password';tg.textContent=s?'Hide':'Show'};
+lf.onsubmit=async e=>{e.preventDefault();err.textContent='';try{await Auth.login(id.value,pw.value);location.href='bylaws.html'}catch(x){err.textContent=x.message}};
+</script></body></html>
