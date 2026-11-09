@@ -2,9 +2,9 @@
   "_notice": "DEMO ONLY: Static-site JSON credentials are public to visitors and are not secure. Do not put real passwords or confidential access data here. Use server-side authentication for real protection.",
   "users": [
     {
-      "username": "Dmurad",
+      "username": "Dm",
       "email": "didarmurad2019@gmail.com",
-      "password": "Dmurad@1984",
+      "password": "Dmurad@2024",
       "active": true
     }
   ]
