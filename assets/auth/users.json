@@ -1,7 +1,0 @@
-{
-  "note": "Passwords are stored as SHA-256 hashes of 'email:password' (lowercase email). Never store plain text passwords. See README.md to add users.",
-  "users": [
-    { "name": "Administrator", "email": "admin@terranexa.com", "role": "Admin", "hash": "adaa7d90d3af36054dc1c09003fc7285e96ac0483369e9ad48bd96d3cf295073" },
-    { "name": "Board Member", "email": "board@terranexa.com", "role": "Member", "hash": "85a40c02070a9a73a0d501017058be052577f3c7ef18196d6eb80a97e080ca6f" }
-  ]
-}
